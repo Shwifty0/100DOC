@@ -1,43 +1,57 @@
 from turtle import Screen
-from player import Player_Turtle
-from cars import CarManager
-from scoreboard import ScoreBoard
+from paddle import Paddle
+from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 screen = Screen()
-screen.bgcolor('black')
-screen.setup(600, 600)
 screen.tracer(0)
+screen.bgcolor("black")
+screen.setup(width=800, height=600)
 
-p_turtle = Player_Turtle()
-cars = CarManager()
-scoreboard = ScoreBoard()
+# Create a paddle that can be moved using left and right keys
+paddle_one = Paddle(position=(-380, 0))
+paddle_two = Paddle(position=(380, 0))
+ball = Ball()
+score = Scoreboard()
+
 
 screen.listen()
-screen.onkeypress(p_turtle.up, 'Up')
-screen.onkeypress(p_turtle.down, 'Down')
-screen.onkeypress(p_turtle.left, 'Left')
-screen.onkeypress(p_turtle.right, 'Right')
-
+screen.onkeypress(paddle_one.move_up, 'Up')
+screen.onkeypress(paddle_one.move_down, 'Down')
+screen.onkeypress(paddle_two.move_up, 'w')
+screen.onkeypress(paddle_two.move_down, 's')
 
 game_is_on = True
 
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
+    print(ball.move_speed)
     screen.update()
-    cars.spawn_car()
-    cars.move()
+    ball.move()
     
-    for car in cars.cars:
-        if car.distance(p_turtle) < 20:    
-            scoreboard.game_over()
-            game_is_on = False
-            
     
-    if p_turtle.is_at_finish():
-        cars.increase_speed()
-        p_turtle.reset_pos()
-        scoreboard.update_level()
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_y()
+    
+    if ball.distance(paddle_two) < 50 and ball.xcor() > 355 or ball.distance(paddle_one) < 50 and ball.xcor() > -355:
+        ball.bounce_x()
+        
+    if ball.xcor() > 375:
+        ball.reset_position()
+        score.l_point()
+
+    if ball.xcor() < -375:
+        ball.reset_position()
+        score.r_point()
+# Keep track of scores 
+
+
+
+
+
+
+
 
 
 

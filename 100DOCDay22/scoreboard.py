@@ -1,26 +1,28 @@
 from turtle import Turtle
-LEVEL = 0
-LEVEL_INCREASE = 1
-class ScoreBoard(Turtle):
-    
+
+
+class Scoreboard(Turtle):
+
     def __init__(self):
         super().__init__()
-        self.level = LEVEL
-        self.ht()
+        self.color("white")
         self.penup()
-        self.goto(-280, 270)
-        self.color('white')
-        self.write(f'Level {self.level}', font=('Courier', '20', 'bold'))
-    
-    def update_level(self):
+        self.hideturtle()
+        self.l_score = 0
+        self.r_score = 0
+        self.update_scoreboard()
+
+    def update_scoreboard(self):
         self.clear()
-        self.level += LEVEL_INCREASE
-        self.write(f'Level {self.level}', font=('Courier', '20', 'bold'))
-    
-    def game_over(self):
-        self.clear()
-        self.penup()
-        self.goto(-90, 0)
-        self.ht()
-        self.color('white')
-        self.write(f'GAME OVER', font=('Courier', '25', 'bold'))
+        self.goto(-100, 200)
+        self.write(self.l_score, align="center", font=("Courier", 80, "normal"))
+        self.goto(100, 200)
+        self.write(self.r_score, align="center", font=("Courier", 80, "normal"))
+
+    def l_point(self):
+        self.l_score += 1
+        self.update_scoreboard()
+
+    def r_point(self):
+        self.r_score += 1
+        self.update_scoreboard()
