@@ -61,4 +61,13 @@ a = a + b
 b = a - b
 a = a - b
 
-print(a, b)
+#print(a, b)
+
+ls1 = [1,2,3,4,5,6]
+ls2 = [1,2,3,4,5,6]
+
+sum = 0
+for i in range(len(ls1)-1):
+    cur_sum = ls1[i] + ls2[i]
+    sum += cur_sum
+    print(sum)
