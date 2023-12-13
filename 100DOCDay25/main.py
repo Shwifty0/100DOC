@@ -28,10 +28,7 @@ while states_count != 0:
                 state_turtle.write(correct_form, font=('Arial', 10, 'bold'))
                 states_count -= 1
     if user_input == 'Exit':
-        missing_states = []
-        for state in states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        missing_states = [state for state in states if state not in guessed_states]
         new_data = pd.DataFrame(missing_states)
         new_data.to_csv('states_to_learn.csv')
         break
