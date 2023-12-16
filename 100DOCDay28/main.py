@@ -3,7 +3,7 @@ import tkinter.messagebox
 FONT = 'DS-Digital'
 FG = "white"
 BG = '#161A30'
-WORK_MIN = 1
+WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 
@@ -47,10 +47,7 @@ def count_down(count):
         timer = window.after(1000, count_down, count-1)
     else:
         start_timer()
-        mark = ''
-        work_sessions = reps/2
-        for _ in range(work_sessions):
-            mark += ":)"
+        
 
 def show_task():
     task_label.config(text= task_entry.get(), font=(FONT, 20, 'italic'), fg=FG)
@@ -69,7 +66,7 @@ task_entry = Entry()
 task_entry.grid(row=3, column=3, pady = 10)
 
 start_button = Button(width=5,text='Start Pomodoro', command= start_timer, padx=25, pady=1, fg=FG ,bg=BG)
-start_button.grid(row=4, column=1)
+start_button.grid(row=4, column=2)
 
 reset_button = Button(width=5,text='Reset', command= reset_timer, padx=25, pady=1,fg=FG,bg=BG)
 reset_button.grid(row=4, column=4)
