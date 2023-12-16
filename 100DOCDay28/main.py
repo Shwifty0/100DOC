@@ -74,7 +74,7 @@ start_button.grid(row=4, column=1)
 reset_button = Button(width=5,text='Reset', command= reset_timer, padx=25, pady=1,fg=FG,bg=BG)
 reset_button.grid(row=4, column=4)
 
-current_task = Label(text="Current Task:", fg=FG,bg=BG)
+current_task = Label(text="Current Task:", font=('courier', 15, 'bold'), fg=FG, bg=BG)
 current_task.grid(row=2, column=1)
 
 task_label = Label(text="", fg=FG,bg=BG)
