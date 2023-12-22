@@ -35,11 +35,16 @@ import pandas as pd
 data = pd.read_csv('nato_phonetic_alphabet.csv')
 nato_code = {row.letter:row.code for (index, row) in data.iterrows()}
 
-userinp = input('Enter a Name:')
 
-def nato_code_generator(input):
-    result = [nato_code[char.upper()] for char in userinp]
-    return result
 
-result = nato_code_generator(userinp)
-print(result)
+def nato_code_generator():
+    userinp = input('Enter a Name:')
+    try:
+        result = [nato_code[char.upper()] for char in userinp]
+    except KeyError:
+        print("Sorry type only letters from the Alphabet")
+        nato_code_generator()
+    else:
+        print(result)
+
+nato_code_generator()

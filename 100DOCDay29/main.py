@@ -1,6 +1,8 @@
 from tkinter import *
 import tkinter.messagebox
 from random import choice, randint, shuffle
+import json
+import os
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def password_generator():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -25,15 +27,45 @@ def save():
     website = web_entry.get()
     email = email_entry.get()
     password = pw_entry.get()
-    data = f"Website:{website} | email: {email} | password:{password}\n"
+    new_data = {
+        website :{
+            'email': email,
+            'password':password
+        }
+    }
 
-    with open('data.txt', 'a') as f:
-        f.writelines(data)
+    try:
+        with open('data.json', 'r') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        with open('data.json', 'w') as f:
+            json.dump(new_data, f, indent=4)
+            tkinter.messagebox.showinfo("Confirmation", message="Password has been saved!") 
+    else:
+        data.update(new_data)
+        with open('data.json', 'w') as f:
+            json.dump(data, f, indent=4)
+            tkinter.messagebox.showinfo("Confirmation", message="Password added!")
+    finally:
         web_entry.delete(0,'end')
         pw_entry.delete(0,'end')
 
-    tkinter.messagebox.showinfo("Confirmation", message="Password has been saved!")
-
+# ---------------------------- SEARCH PASSWORD ------------------------------- #
+def search_password():
+    website = web_entry.get()
+    try:
+        with open('data.json', 'r') as db:
+            data = json.load(db)
+    except FileNotFoundError:
+        tkinter.messagebox.showinfo(message="File Not Found")
+    else:
+        if website in data:    
+            email = data[website]['email']
+            pw = data[website]['password']
+            tkinter.messagebox.showinfo("Confirmation", message=f"Password: {pw}\nEmail: {email}")
+        else:
+            tkinter.messagebox.showinfo("Confirmation", message=f"No password for: {website}")
+        
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.config(padx=50, pady=50)
@@ -68,7 +100,8 @@ generate_pw = Button(text="Generate Password", command= password_generator)
 generate_pw.grid(row=3, column=2)
 add = Button(text="Add", width=36, command=save)
 add.grid(row=4, column=1, columnspan=2)
-
+search = Button(text="Search", command=search_password)
+search.grid(row =1 , column=3)
 
 
 window.mainloop()
