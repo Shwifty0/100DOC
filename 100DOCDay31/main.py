@@ -8,11 +8,22 @@ from random import choice
 3. The most important thing is to understand how the code works line-by-line. 
 
 """
+to_learn = {}
 
+try:
+    german_words = pd.read_csv('words_to_learn.csv')
+except FileNotFoundError:
+    original_data = pd.read_csv("de_words.csv")
+    to_learn = original_data.to_dict(orient="records")
+else:    
+    to_learn = german_words.to_dict(orient="records")
+    
 
-german_words = pd.read_csv('de_words.csv')
-to_learn = german_words.to_dict(orient="records")
-current_card = {}
+def remove_card():
+    to_learn.remove(current_card)
+    data = pd.DataFrame(to_learn)
+    data.to_csv('words_to_learn.csv', index=False)
+    next_card()
 
 def next_card():
     global current_card, flip_timer
@@ -42,7 +53,6 @@ right_image = PhotoImage(file="right.png")
 wrong_image = PhotoImage(file="wrong.png")
 
 
-
 # Canvas
 canvas = Canvas(width=800, height=526, bg= "#88AB8E", highlightbackground="#88AB8E")
 card_background = canvas.create_image(400, 256, image = card_front)
@@ -52,7 +62,7 @@ canvas.grid(row=0, column=0, columnspan=2)
 
 
 # Buttons
-right_button = Button(image=right_image, bg="#88AB8E", command=next_card)
+right_button = Button(image=right_image, bg="#88AB8E", command=remove_card)
 right_button.grid(row=1, column=1)
 wrong_button = Button(image=wrong_image, bg="#88AB8E", command=next_card)
 wrong_button.grid(row=1, column=0)
