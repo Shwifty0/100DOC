@@ -10,8 +10,8 @@ data = df.to_dict()
 today = dt.datetime.today()
 month, day = today.month, today.day
 
-MY_EMAIL = "ozairmohammad12@gmail.com"
-PASSWORD = "eumcxjczcwtucqem"
+MY_EMAIL = "YOUR EMAIL"
+PASSWORD = "YOUR PASSWORD"
 
 letter_templates = os.listdir("letter_templates")
 
