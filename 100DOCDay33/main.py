@@ -8,7 +8,6 @@ def get_quote():
     kanye_quote = response.json()["quote"]
     response.raise_for_status()
     canvas.itemconfig(quote_text, text = kanye_quote)
-    #Write your code here.
 
 
 
