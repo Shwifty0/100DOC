@@ -1,12 +1,15 @@
 import requests
 from datetime import datetime
-from apik import SHEETY_AUTH, NUTRITION_API_KEY, NUTRITION_APP_ID
+import os
 
+SHEETY_AUTH = os.environ.get("SHEETY_AUTH")
+NUTRITION_API_KEY = os.environ.get("NUTRITION_API_KEY")
+NUTRITION_APP_ID = os.environ.get("NUTRITION_APP_ID")
 
 nutrionix_workout_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 sheety_endpoint = "https://api.sheety.co/66e832008d5b0906c5e4e3a8bd2ca1d6/myworkouts/sheet1"
 
-exercises_input = input("What did you do?")
+exercises_input = input("What exercises did you do today?😃\t")
 
 nutrionix_headers = {
     "x-app-id":NUTRITION_APP_ID,
@@ -22,7 +25,7 @@ body_param = {
 
 response = requests.post(url=nutrionix_workout_endpoint, json = body_param, headers=nutrionix_headers,)
 json_data = response.json()
-print(type(json_data["exercises"][0]["duration_min"]), json_data["exercises"][0]["duration_min"])
+
 for i in range(len(json_data["exercises"])):
     
     # duration, calories, nameofexercise, date&time
