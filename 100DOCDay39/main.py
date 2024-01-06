@@ -1,31 +1,34 @@
-from sheet_manager import Sheety
-from flight_data import FlightData
+from data_manager import DataManager
+from flight_search import FlightSearch
 from notification_manager import NotificationManager
+from datetime import datetime, timedelta
 
-sheet_data = Sheety()
-flight_data = FlightData()
-notification = NotificationManager()
 
-TRAVEL_FROM = "KHI"
+data_manager = DataManager()
+sheet_data = data_manager.get_destination_data()
+flight_search = FlightSearch()
+notification_manager = NotificationManager()
 
-sheet_data = sheet_data.get_data()
+if sheet_data[0]["iataCode"] == "":
+    for row in sheet_data:
+        row["iataCode"] = flight_search.get_destination_code(row["city"])
+    data_manager.destination_data = sheet_data
+    data_manager.update_destination_codes()
 
-for data in sheet_data:
-    iataCode = data["iataCode"]
-    current_lowestPrice = data["lowestPrice"]
-    data = flight_data.get_flight_data(iataCode, 1000, 110000)
+tommorow = datetime.now() + timedelta(1)
+six_months_from_today = datetime.now() + timedelta(days=(6*30))
 
-    for item in data:
-        data = item
-        city_code = data["cityCodeTo"]
-        city = data["cityTo"]
-        price = data["price"]
-        
-        if price < current_lowestPrice:
-            notification.send_sms(price=price,
-                                city_to=city, 
-                                city_code_to=city_code,
-                                travel_from = TRAVEL_FROM)
-        else:
-            print("Sorry no lower prices were found")
-            break
+for destination in sheet_data:
+    flight = flight_search.flight_search(
+        "KHI",
+        destination["iataCode"],
+        from_time = tommorow,
+        to_time = six_months_from_today
+    )
+    
+    if flight.price < destination["lowestPrice"]:
+        notification_manager.send_sms(
+            message=f"Low price alert! Only PKR: {flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
+        )
+    else:
+        print("Sorry! Not lower prices found.")
