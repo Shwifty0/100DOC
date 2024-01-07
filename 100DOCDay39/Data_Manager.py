@@ -1,7 +1,9 @@
 import requests
 import os
 sheety_endpoint = "https://api.sheety.co/66e832008d5b0906c5e4e3a8bd2ca1d6/flightDeals/prices"
+sheety_user_endpoint = "https://api.sheety.co/66e832008d5b0906c5e4e3a8bd2ca1d6/flightDeals/users"
 sheety_auth = os.environ.get("SHEETY_AUTH")
+
 
 header = {
     "Authorization":sheety_auth
@@ -29,3 +31,9 @@ class DataManager:
                 headers=header
             )
             print(response.text)
+    
+    def get_customer_emails(self):
+        response = requests.get(url = sheety_user_endpoint, headers=header)
+        data = response.json()
+        self.customer_data = data["users"]
+        return self.customer_data

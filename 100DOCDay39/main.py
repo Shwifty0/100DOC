@@ -5,9 +5,10 @@ from datetime import datetime, timedelta
 
 
 data_manager = DataManager()
-sheet_data = data_manager.get_destination_data()
 flight_search = FlightSearch()
 notification_manager = NotificationManager()
+
+sheet_data = data_manager.get_destination_data()
 
 if sheet_data[0]["iataCode"] == "":
     for row in sheet_data:
@@ -26,9 +27,16 @@ for destination in sheet_data:
         to_time = six_months_from_today
     )
     
+    if flight == None:
+        continue
+    
     if flight.price < destination["lowestPrice"]:
-        notification_manager.send_sms(
-            message=f"Low price alert! Only PKR: {flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
-        )
-    else:
-        print("Sorry! Not lower prices found.")
+        users = data_manager.get_customer_emails()
+        emails = [row["email"]for row in users]
+        names = [row["firstName"] for row in users]
+        message = f"Low price alert! Only PKR: {flight.price} to fly from {flight.origin_city}-{flight.origin_airport} to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} to {flight.return_date}."
+
+        if flight.stop_overs > 0:
+            message += f"\nFlight has {flight.stop_overs} stop over, via {flight.via_city}."
+        
+        notification_manager.send_email(emails, message)
