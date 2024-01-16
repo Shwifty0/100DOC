@@ -22,8 +22,8 @@ if price_of_product < PRICE:
             print("Attempting to log into account...")
             connection.login("YOUR EMAIL", password= "YOUR APP PASSWORD")
             print("Successful Login!")
-            connection.sendmail(from_addr="ozairmohammad12@gmail.com",
-                                                to_addrs="ozairmohammad12@gmail.com",
+            connection.sendmail(from_addr="YOUR EMAIL",
+                                                to_addrs="YOUR EMAIL",
                                                 msg=message_to_mail)
             print("Email has been sent.")
     except:
