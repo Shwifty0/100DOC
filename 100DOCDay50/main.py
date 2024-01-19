@@ -1,3 +1,4 @@
+"""The code can be tweaked for setting a time limit as the loop continuously runs"""
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -10,8 +11,8 @@ driver = webdriver.Chrome(options=chrome_options)
 
 #driver.maximize_window()
 
-FB_EMAIL = "your email"
-FB_PW = "your pw"
+FB_EMAIL = "YOU FB EMAIL"
+FB_PW = "YOUR FB PW"
 
 tinder_url = "https://tinder.com/"
 driver.get(tinder_url)
@@ -51,9 +52,13 @@ time.sleep(2)
 disable_noti = driver.find_element(By.XPATH, value='//*[@id="u1737791502"]/main/div/div/div/div[3]/button[2]/div[2]/div[2]')
 disable_noti.click()
 
-for i in range(10):
+while True:
     time.sleep(2)
-    swipe_right = driver.find_element(By.XPATH, value='//*[@id="Tinder"]/body').send_keys(Keys.ARROW_RIGHT)
-    
-    
-#Keys.ARROW_RIGHT
+    try:
+        swipe_right = driver.find_element(By.XPATH, value='//*[@id="Tinder"]/body').send_keys(Keys.ARROW_RIGHT)
+        not_intrested = driver.find_element(By.XPATH, value='//*[@id="u1737791502"]/main/div/div[2]/button[2]/div[2]/div[2]')
+        
+        if not_intrested:
+            not_intrested.click()
+    except Exception as e:
+        print(e)   
