@@ -6,6 +6,20 @@ agify_endpoint = "https://api.agify.io"
 
 app = Flask("__name__")
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+
+@app.route("/blog/<num>")
+def blog_posts(num):
+    print(num)
+    blog_endpoint = "https://api.npoint.io/c790b4d5cab58020d391"
+    response = requests.get(blog_endpoint)
+    blog_posts_list = response.json()
+    return render_template("blog.html", blog_posts = blog_posts_list)
+
 @app.route("/guess/<name>")
 def guess(name):
     params = {
