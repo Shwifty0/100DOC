@@ -1,0 +1,20 @@
+.text-center {
+    text-align: center!important;
+}
+
+.py-5 {
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+}
+
+.px-4 {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+}
+.my-5 {
+    margin-top: 3rem!important;
+    margin-bottom: 3rem!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
