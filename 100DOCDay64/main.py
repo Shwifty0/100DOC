@@ -9,7 +9,7 @@ from wtforms.validators import DataRequired
 import requests
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'Your Secret?'
 Bootstrap5(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///movie-collection.db"
 
