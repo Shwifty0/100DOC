@@ -6,7 +6,7 @@ from sqlalchemy import Integer, String, Float
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField
 from wtforms.validators import DataRequired
-import requests
+import requests, os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Your Secret?'
@@ -61,7 +61,7 @@ def add_movie():
     search_movie_endpoint = "https://api.themoviedb.org/3/search/movie"
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTM0NDllODdhYTcyNDJlOTQwYzY4MWEzYmFkMDIwMCIsInN1YiI6IjY0YWU5MTM4ZTI0YjkzNWIzMWM5OTc4OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9WIwc_M6LdpEBNkrUCxJuB11EmrDRi3ZnIaTWHE2gag"
+        "Authorization": os.environ.get("TMDB_API")
     }
     params = {
         "query": add_form.data["title"],
