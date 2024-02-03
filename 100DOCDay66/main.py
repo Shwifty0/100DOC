@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -82,17 +82,44 @@ def add_new_post():
                                 img_url = img_url)
         db.session.add(new_blog_post)
         db.session.commit()
-        print("Successfully added the blog post")
+        return redirect(url_for("get_all_posts"))
 
     return render_template("make-post.html", form = add_blog_post)
 
 # TODO: edit_post() to change an existing blog post
-@app.route("/edit_post", methods = ["GET", "PUT"])
+@app.route("/edit_post", methods = ["GET", "POST"])
 def edit_post():
+    get_blog_by_id = BlogPost.query.get(request.args["post_id"])
+    print(get_blog_by_id)
+    edit_form = BlogForm(
+        title = get_blog_by_id.title,
+        body = get_blog_by_id.body,
+        author = get_blog_by_id.author,
+        img_url = get_blog_by_id.img_url,
+        subtitle = get_blog_by_id.subtitle,
+    ) 
+    if edit_form.validate_on_submit():
+        print("Form validated")
+        get_blog_by_id.title = edit_form.data["title"]
+        get_blog_by_id.body  = edit_form.data["body"] 
+        get_blog_by_id.author = edit_form.data["author"]
+        get_blog_by_id.img_url = edit_form.data["img_url"]
+        get_blog_by_id.subtitle = edit_form.data["subtitle"]
+        db.session.commit()
+        return redirect(url_for("get_all_posts"))
+
+    return render_template("make-post.html", form = edit_form)
+    
     
 # TODO: delete_post() to remove a blog post from the database
-@app.route("/delete_post")
+@app.route("/delete_post", methods = ["GET", "DELETE"])
+def delete_post():
+    get_blog_by_id = BlogPost.query.get(request.args["post_id"])
+    db.session.delete(get_blog_by_id)
+    db.session.commit()
+    return redirect(url_for("get_all_posts"))
 # Below is the code from previous lessons. No changes needed.
+@app.route("/about")
 def about():
     return render_template("about.html")
 
