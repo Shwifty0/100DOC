@@ -10,6 +10,8 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
+  
+    {% if not current_user.is_authenticated: %}
   <form action="{{ url_for('login') }}" method="post">
     
     <input type="text" name="email" placeholder="Email" required="required" />
@@ -23,6 +25,7 @@
       Let me in.
     </button>
   </form>
+  {% endif %}
 </div>
 
 {% endblock %}
