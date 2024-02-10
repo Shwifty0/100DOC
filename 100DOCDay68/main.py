@@ -2,18 +2,27 @@ from datetime import date
 from flask import Flask, abort, render_template, redirect, url_for, flash
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
-#from flask_gravatar import Gravatar
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text, ForeignKey
-from typing import List
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
-# Import your forms from the forms.py
-from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm, ContactForm
+from smtplib import SMTP
+import hashlib
+import os
 
 
+
+def gravatar_url(email, size=100, rating='g', default='retro', force_default=False):
+    """
+    This is a simple fucntion that hits the Gravatar endpoint with emails stored in the database
+    allowing users to have different avatar images.
+    
+    """
+    hash_value = hashlib.md5(email.lower().encode('utf-8')).hexdigest()
+    return f"https://www.gravatar.com/avatar/{hash_value}?s={size}&d={default}&r={rating}&f={force_default}"
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -36,26 +45,42 @@ db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
 # CONFIGURE TABLES
-class BlogPost(db.Model):
-    __tablename__ = "blog_posts"
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
-    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)
-    date: Mapped[str] = mapped_column(String(250), nullable=False)
-    body: Mapped[str] = mapped_column(Text, nullable=False)
-    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("user_table.id")) 
-    author: Mapped["User"] = relationship(back_populates="posts")
-    img_url: Mapped[str] = mapped_column(String(250), nullable=False)
-
-
 # TODO: Create a User table for all your registered users.
 class User(db.Model, UserMixin):
-    __tablename__ = "user_table"
+    __tablename__ = "users"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     email: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
     password: Mapped[str] = mapped_column(String(250), nullable=False)
     name: Mapped[str] = mapped_column(String(250), nullable=False)
-    posts: Mapped[List["BlogPost"]] = relationship(back_populates="author")
+    posts = relationship("BlogPost", back_populates="author")
+    comments = relationship("Comment", back_populates="comment_author")
+
+class BlogPost(db.Model):
+    __tablename__ = "blog_posts"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    
+    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id")) 
+    author = relationship("User", back_populates = "posts")
+    comments = relationship("Comment", back_populates="parent_post")
+    
+    title: Mapped[str] = mapped_column(String(250), unique=True, nullable=False)
+    subtitle: Mapped[str] = mapped_column(String(250), nullable=False)
+    date: Mapped[str] = mapped_column(String(250), nullable=False)
+    body: Mapped[str] = mapped_column(Text, nullable=False)
+    img_url: Mapped[str] = mapped_column(String(250), nullable=False)
+
+
+class Comment(db.Model):
+    __tablename__ = "comments"
+    id = mapped_column(Integer, primary_key=True)
+    text = mapped_column(Text, nullable=False)
+    
+    author_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"))
+    comment_author = relationship("User", back_populates="comments")
+
+    # Child Relationship to the BlogPosts
+    post_id: Mapped[str] = mapped_column(Integer, db.ForeignKey("blog_posts.id"))
+    parent_post = relationship("BlogPost", back_populates="comments")
 
 
 
@@ -65,8 +90,9 @@ with app.app_context():
 def admin_only(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        print(f"The current user_id is:{current_user.get_id()}")
-        if current_user.get_id() == '1':
+        print(f"The current user_id is: {current_user.get_id()} -- {type(current_user.get_id())}")
+        admins = ["1", "2"]
+        if current_user.get_id() in admins:
             return func(*args, **kwargs)
         else:
             return abort(403)
@@ -112,6 +138,9 @@ def login():
         if find_email_db and check_password_hash(find_email_db.password, login_form.data['password']):
             login_user(find_email_db)
             return redirect(url_for("get_all_posts"))
+        else:
+            flash("Register or enter your credentials correctly.")
+            return redirect(url_for("login"))
 
     return render_template("login.html", form = login_form)
 
@@ -119,8 +148,14 @@ def login():
 def get_all_posts():
     result = db.session.execute(db.select(BlogPost))
     posts = result.scalars().all()
-    #print(current_user.get_id())
-    return render_template("index.html", all_posts=posts, logged_in = current_user.is_authenticated, id = current_user.get_id())
+    admins = ["1", "2"]
+    print(current_user.get_id())
+    return render_template("index.html",
+                            all_posts=posts,
+                            logged_in = current_user.is_authenticated,
+                            id = current_user.get_id(),
+                            author = current_user,
+                            admins = admins)
 
 @app.route('/logout')
 def logout():
@@ -131,7 +166,6 @@ def logout():
 
 # TODO: Allow logged-in users to comment on posts
 @app.route("/post/<int:post_id>", methods = ["GET", "POST"])
-@login_required
 def show_post(post_id):
     
     """
@@ -142,12 +176,31 @@ def show_post(post_id):
     the database doesn't know how to relate the new user's comment
     """
     requested_post = db.get_or_404(BlogPost, post_id)
+    comments = db.session.execute(db.select(Comment).where(Comment.post_id == post_id)).scalars().all()
+    print(comments)
     comment_form = CommentForm()
 
-    # if comment_form.validate_on_submit():
-    #     comment = comment_form.data["comment"]
-
-    return render_template("post.html", post=requested_post, form = comment_form)
+    
+    if comment_form.validate_on_submit():
+        if current_user.is_authenticated:
+            new_comment = Comment()
+            new_comment.text = comment_form.data["comment"]
+            new_comment.author_id = int(current_user.get_id())
+            new_comment.post_id = post_id
+            db.session.add(new_comment)
+            db.session.commit()
+            
+            return redirect(url_for("show_post", post_id = post_id))
+        else:
+            flash("You have to login in order to comment")
+            return redirect(url_for("login"))
+    
+    return render_template("post.html", 
+                            post=requested_post,
+                            form = comment_form,
+                            logged_in = current_user.is_authenticated,
+                            comments = comments,
+                            gravatar_url = gravatar_url)
 
 
 # TODO: Use a decorator so only an admin user can create a new post
@@ -167,7 +220,8 @@ def add_new_post():
         db.session.add(new_post)
         db.session.commit()
         return redirect(url_for("get_all_posts"))
-    return render_template("make-post.html", form=form)
+    
+    return render_template("make-post.html", form=form, logged_in = current_user.is_authenticated)
 
 
 # TODO: Use a decorator so only an admin user can edit a post
@@ -190,7 +244,7 @@ def edit_post(post_id):
         post.body = edit_form.body.data
         db.session.commit()
         return redirect(url_for("show_post", post_id=post.id))
-    return render_template("make-post.html", form=edit_form, is_edit=True)
+    return render_template("make-post.html", form=edit_form, is_edit=True, logged_in = current_user.is_authenticated)
 
 
 # TODO: Use a decorator so only an admin user can delete a post
@@ -203,15 +257,26 @@ def delete_post(post_id):
     return redirect(url_for('get_all_posts'))
 
 
+
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    return render_template("about.html", logged_in = current_user.is_authenticated)
 
 
-@app.route("/contact")
+@app.route("/contact", methods = ["GET", "POST"])
 def contact():
-    return render_template("contact.html")
+    contact_form = ContactForm()
+    msg_sent = False
+    if contact_form.validate_on_submit():
+        msg_sent = True
+        with SMTP(host="smtp.gmail.com", port= 587) as connection:
+            connection.starttls()
+            connection.login(user="ozairmohammad12@gmail.com", password = os.environ.get("GMAIL_APP"))
+            connection.sendmail(from_addr="ozairmohammad12@gmail.com", to_addrs = "ozairmohammad12@gmail.com",
+                                msg=f"Subject:Someone Wants to Contact You!\n\nTheir email: {contact_form.data['email_address']}\nTheir name: {contact_form.data['name']}\nTheir message: {contact_form.data['message']}")
+    
+    return render_template("contact.html", form = contact_form, msg_sent = msg_sent)
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5000)
