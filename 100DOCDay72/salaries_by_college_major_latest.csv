@@ -1,0 +1,476 @@
+,Rank,Major,Degree_Type,Early_Career_Pay,Mid_Career_Pay,High_Meaning
+1,1,Petroleum Engineering,Bachelors,"$97,500","$212,500",61%
+2,2,Operations Research & Industrial Engineering,Bachelors,"$98,300","$191,800",21%
+3,3,Interaction Design,Bachelors,"$74,700","$173,600",54%
+4,4,Applied Economics and Management,Bachelors,"$76,500","$164,400",54%
+5,5,Building Science,Bachelors,"$69,000","$163,100",47%
+6,6,Operations Research,Bachelors,"$92,200","$160,000",57%
+8,8,Systems Engineering,Bachelors,"$87,000","$159,100",58%
+9,9,Optical Science & Engineering,Bachelors,"$79,600","$158,300",73%
+10,10,Information & Computer Science,Bachelors,"$76,000","$157,800",63%
+11,11,Aeronautics & Astronautics,Bachelors,"$88,200","$156,900",56%
+12,12,Aerospace Studies,Bachelors,"$62,600","$154,300",-
+13,13,Pharmacy,Bachelors,"$69,400","$154,000",79%
+14,14,Cognitive Science,Bachelors,"$78,000","$153,800",43%
+15,15,Managerial Economics,Bachelors,"$74,700","$153,300",38%
+16,16,Quantitative Economics,Bachelors,"$74,500","$152,700",43%
+17,17,Econometrics,Bachelors,"$72,000","$152,100",35%
+18,18,Foreign Affairs,Bachelors,"$62,900","$152,000",32%
+19,19,Chemical Engineering,Bachelors,"$85,600","$151,800",55%
+20,20,Public Accounting,Bachelors,"$69,700","$151,200",47%
+21,21,Political Economy,Bachelors,"$73,100","$150,600",31%
+22,22,Corporate Accounting & Finance,Bachelors,"$76,800","$149,600",50%
+23,23,Actuarial Science,Bachelors,"$76,700","$149,000",42%
+24,24,Computer Engineering (CE),Bachelors,"$89,100","$148,500",46%
+25,25,Electrical Power Engineering,Bachelors,"$84,700","$148,300",72%
+26,26,Computer Science (CS) & Engineering,Bachelors,"$90,500","$148,200",44%
+27,27,Marine Transportation Management,Bachelors,"$78,700","$148,000",-
+28,28,Operations & Information Systems Management,Bachelors,"$78,800","$147,500",24%
+30,30,Electrical & Computer Engineering (ECE),Bachelors,"$88,100","$147,000",49%
+31,31,Entrepreneurship & Marketing,Bachelors,"$63,200","$145,800",45%
+32,32,Astronomy,Bachelors,"$75,300","$145,600",52%
+33,33,Mechatronics,Bachelors,"$80,900","$144,300",46%
+34,34,Computational & Applied Mathematics,Bachelors,"$85,700","$144,100",46%
+35,35,Aeronautical Engineering,Bachelors,"$84,200","$143,400",63%
+36,36,Welding Engineering,Bachelors,"$86,600","$143,300",-
+37,37,Electrical Engineering (EE),Bachelors,"$84,900","$143,000",54%
+38,38,Electrical & Electronics Engineering (EEE),Bachelors,"$83,900","$142,900",57%
+39,39,Naval Architecture & Marine Engineering,Bachelors,"$82,800","$142,800",49%
+40,40,Instrumentation & Control Engineering,Bachelors,"$82,800","$141,900",44%
+41,41,Construction Engineering Management,Bachelors,"$78,100","$141,800",53%
+42,42,Computer Science (CS) & Mathematics,Bachelors,"$80,300","$141,000",44%
+43,43,Engineering Physics,Bachelors,"$78,600","$140,300",48%
+44,44,Mechanical & Aeronautical Engineering,Bachelors,"$80,900","$139,900",62%
+45,45,Computer Science (CS),Bachelors,"$85,400","$139,700",42%
+47,47,Jazz Studies,Bachelors,"$60,000","$139,400",51%
+48,48,Bioscience,Bachelors,"$59,900","$139,300",-
+49,49,Information Management,Bachelors,"$67,000","$139,000",33%
+50,50,Aerospace Engineering,Bachelors,"$83,500","$138,100",53%
+51,51,Pharmacology,Bachelors,"$63,500","$137,800",-
+53,53,Nuclear Engineering,Bachelors,"$85,200","$137,600",55%
+54,54,Bioengineering (BioE),Bachelors,"$79,500","$137,300",67%
+55,55,Applied Mathematics,Bachelors,"$77,200","$137,000",40%
+56,56,Physician Assistant Studies,Bachelors,"$109,600","$136,500",83%
+58,58,Materials Science,Bachelors,"$76,700","$136,200",-
+59,59,Engineering,Bachelors,"$77,800","$135,800",58%
+60,60,Industrial & Systems Engineering,Bachelors,"$82,000","$135,700",48%
+61,61,Metallurgical Engineering,Bachelors,"$90,800","$135,500",63%
+62,62,Materials Science & Engineering,Bachelors,"$81,200","$135,300",47%
+63,63,Mining Engineering,Bachelors,"$87,400","$135,200",59%
+64,64,Operations Management & Information Systems,Bachelors,"$75,900","$134,900",43%
+65,65,Business & Information Technology (IT),Bachelors,"$71,400","$134,700",50%
+66,66,Interactive Media Design,Bachelors,"$59,600","$134,400",33%
+67,67,Physics,Bachelors,"$75,500","$134,100",49%
+69,69,Materials Engineering,Bachelors,"$81,200","$133,900",58%
+70,70,Biomedical Engineering (BME),Bachelors,"$80,300","$133,500",71%
+71,71,Software Engineering,Bachelors,"$84,200","$133,400",45%
+73,73,Global & International Studies,Bachelors,"$59,400","$133,300",55%
+74,74,Computer & Information Science,Bachelors,"$72,600","$133,100",58%
+75,75,Aeronautical/Aerospace Engineering Technology,Bachelors,"$82,400","$132,800",51%
+76,76,Industrial Hygiene,Bachelors,"$65,100","$132,700",54%
+78,78,Engineering Mechanics,Bachelors,"$82,800","$131,900",-
+79,79,Business & Economics,Bachelors,"$66,500","$131,700",44%
+80,80,Astrophysics,Bachelors,"$78,600","$131,200",61%
+81,81,Telecommunications Engineering,Bachelors,"$78,000","$130,900",50%
+83,83,International Business & Finance,Bachelors,"$69,000","$130,800",30%
+84,84,International Economics,Bachelors,"$66,200","$130,600",54%
+85,85,Mechanical Engineering (ME),Bachelors,"$79,600","$130,300",49%
+88,88,Economics,Bachelors,"$70,500","$130,200",41%
+89,89,Ceramic Engineering,Bachelors,"$76,400","$129,900",46%
+90,90,Management Information Systems (MIS),Bachelors,"$73,900","$129,500",42%
+91,91,Industrial Distribution,Bachelors,"$71,400","$129,200",48%
+92,92,Structural Engineering (SE),Bachelors,"$76,200","$128,900",67%
+93,93,Accounting & Taxation,Bachelors,"$61,900","$128,600",-
+94,94,Integrated Science & Technology,Bachelors,"$71,600","$128,400",55%
+95,95,Automotive Engineering,Bachelors,"$75,700","$128,300",50%
+96,96,Mathematics & Statistics,Bachelors,"$71,800","$128,100",43%
+97,97,Packaging Science,Bachelors,"$78,600","$127,600",41%
+98,98,Construction Project Management,Bachelors,"$69,400","$127,400",64%
+99,99,Plastics Engineering,Bachelors,"$79,200","$127,200",58%
+100,100,Information & Decision Sciences,Bachelors,"$73,200","$126,800",36%
+101,101,Applied Physics,Bachelors,"$75,800","$126,500",53%
+102,102,Petroleum Land Management,Bachelors,"$66,600","$125,900",-
+104,104,Industrial Engineering & Management,Bachelors,"$74,800","$125,700",54%
+105,105,Psychobiology,Bachelors,"$58,600","$125,400",69%
+107,107,Finance & Economics,Bachelors,"$70,300","$124,800",42%
+108,108,Medicine,Bachelors,"$88,700","$124,700",94%
+109,109,Asian Studies,Bachelors,"$53,100","$123,800",43%
+110,110,Marketing & International Business,Bachelors,"$59,600","$123,500",36%
+111,111,Government,Bachelors,"$63,500","$123,400",45%
+112,112,Finance & Real Estate,Bachelors,"$73,500","$123,300",42%
+114,114,Financial Economics,Bachelors,"$70,500","$123,100",36%
+117,117,Nuclear Engineering Technology (NET),Bachelors,"$92,500","$122,800",54%
+119,119,Mathematics,Bachelors,"$72,300","$122,700",44%
+120,120,Civil Engineering (CE),Bachelors,"$73,400","$122,600",65%
+121,121,Polymer Science & Engineering,Bachelors,"$82,900","$122,200",-
+124,124,Applied Economics,Bachelors,"$69,200","$122,000",41%
+126,126,Economics & Political Science,Bachelors,"$64,200","$121,900",46%
+129,129,Construction Science,Bachelors,"$77,500","$121,800",67%
+133,133,Control Engineering,Bachelors,"$77,700","$121,700",59%
+134,134,Russian Studies,Bachelors,"$56,500","$121,600",41%
+135,135,Cybersecurity,Bachelors,"$72,600","$121,500",56%
+136,136,Robotics & Automation,Bachelors,"$72,700","$121,200",69%
+137,137,Computer Management Information Systems (CMIS),Bachelors,"$63,900","$121,100",50%
+138,138,Manufacturing Engineering,Bachelors,"$77,500","$121,000",50%
+140,140,Information Systems (IS),Bachelors,"$73,000","$120,600",45%
+141,141,Engineering Management,Bachelors,"$77,400","$120,500",53%
+142,142,Computing & Information Systems (CIS),Bachelors,"$68,900","$120,000",46%
+143,143,Mechanical,Bachelors,"$79,800","$119,900",41%
+144,144,Business Logistics & Transportation,Bachelors,"$64,700","$119,800",42%
+145,145,Biosystems Engineering,Bachelors,"$72,600","$119,500",69%
+146,146,Agricultural Economics,Bachelors,"$61,700","$119,400",57%
+147,147,Geophysics,Bachelors,"$62,700","$119,300",42%
+150,150,Management & Finance,Bachelors,"$64,100","$118,800",61%
+151,151,Organic Chemistry,Bachelors,"$50,600","$118,600",-
+154,154,Real Estate,Bachelors,"$69,400","$118,500",42%
+155,155,Plastics Engineering Technology,Bachelors,"$73,600","$118,400",34%
+157,157,Safety Science,Bachelors,"$70,000","$118,100",68%
+159,159,Computer Science & Information Technology,Bachelors,"$73,500","$118,000",48%
+160,160,Japanese Language,Bachelors,"$59,900","$117,900",39%
+161,161,International Business,Bachelors,"$63,100","$117,800",40%
+163,163,Architectural Engineering,Bachelors,"$74,600","$117,700",57%
+164,164,Molecular Biology,Bachelors,"$61,700","$117,600",66%
+166,166,Building Construction Management,Bachelors,"$70,500","$117,500",67%
+167,167,Business Operations,Bachelors,"$71,300","$117,400",-
+168,168,Electrical Engineering Technology (EET),Bachelors,"$74,000","$117,300",48%
+170,170,Government & International Politics (GVIP),Bachelors,"$58,100","$117,200",44%
+171,171,Information Security,Bachelors,"$75,000","$117,100",40%
+172,172,East Asian Studies,Bachelors,"$57,500","$116,900",49%
+173,173,Strategic Management,Bachelors,"$74,900","$116,700",48%
+174,174,Labor Relations,Bachelors,"$55,700","$116,600",35%
+175,175,Entrepreneurship & Leadership,Bachelors,"$64,300","$116,400",43%
+176,176,Agricultural Engineering (AE),Bachelors,"$71,500","$116,300",62%
+177,177,International Relations,Bachelors,"$60,500","$116,100",49%
+179,179,Financial Planning,Bachelors,"$61,200","$115,800",59%
+180,180,Corporate Finance,Bachelors,"$72,400","$115,700",40%
+182,182,Engineering Science,Bachelors,"$77,500","$115,600",47%
+183,183,European History,Bachelors,"$59,400","$115,500",41%
+184,184,Rhetoric,Bachelors,"$59,300","$114,900",41%
+185,185,Network Engineering,Bachelors,"$69,400","$114,600",51%
+186,186,Mechanical Design,Bachelors,"$68,400","$114,500",50%
+187,187,Environmental Engineering,Bachelors,"$70,400","$114,400",62%
+188,188,Robotics,Bachelors,"$87,900","$114,000",57%
+190,190,Economics & Management,Bachelors,"$61,500","$113,800",47%
+191,191,Product Design,Bachelors,"$70,000","$113,600",38%
+193,193,Mechanical Engineering Technology (MET),Bachelors,"$72,300","$113,200",48%
+194,194,Industrial & Labor Relations,Bachelors,"$77,000","$113,000",44%
+195,195,Food Science & Technology,Bachelors,"$59,800","$112,800",49%
+196,196,Accounting & Auditing,Bachelors,"$65,400","$112,700",44%
+197,197,Biochemistry (BCH),Bachelors,"$57,100","$112,600",64%
+198,198,Biotechnology,Bachelors,"$61,100","$112,500",62%
+202,202,Web Development,Bachelors,"$61,600","$112,200",43%
+205,205,Telecommunication & Information Management,Bachelors,"$66,800","$111,900",42%
+208,208,Pharmaceutical Sciences (PS),Bachelors,"$60,900","$111,600",69%
+210,210,Organizational Behavior,Bachelors,"$63,500","$111,400",56%
+214,214,Sales & Business Marketing,Bachelors,"$63,900","$111,300",55%
+217,217,Informatics,Bachelors,"$78,700","$111,200",46%
+219,219,Structural Design & Construction Engineering Technology,Bachelors,"$77,000","$111,100",48%
+221,221,Software Applications & Programming,Bachelors,"$71,400","$110,800",33%
+224,224,Occupational Health and Safety,Bachelors,"$66,800","$110,700",69%
+225,225,Database Management,Bachelors,"$74,500","$110,600",-
+226,226,Production Management,Bachelors,"$55,800","$110,400",27%
+228,228,Business & Finance,Bachelors,"$63,600","$109,800",54%
+229,229,Telecommunications Management,Bachelors,"$60,600","$109,600",46%
+232,232,Politics,Bachelors,"$59,500","$109,300",51%
+237,237,Physics & Astronomy,Bachelors,"$63,700","$109,200",33%
+238,238,Finance & Banking,Bachelors,"$62,600","$109,000",47%
+241,241,Aviation Flight Science (AFL),Bachelors,"$61,500","$108,800",49%
+242,242,Construction Science & Management,Bachelors,"$73,800","$108,600",75%
+243,243,Marketing,Bachelors,"$58,200","$108,400",41%
+244,244,Genetics,Bachelors,"$61,200","$108,100",72%
+247,247,Government & Politics,Bachelors,"$59,500","$107,800",51%
+248,248,Applied Networking & Systems Administration,Bachelors,"$67,200","$107,500",44%
+250,250,Industrial Technology (IT),Bachelors,"$71,700","$107,400",50%
+251,251,Real Estate Development,Bachelors,"$66,600","$107,200",-
+253,253,Electromechanical Engineering,Bachelors,"$79,100","$107,100",56%
+255,255,Social Ecology,Bachelors,"$55,400","$107,000",-
+257,257,Microbiology & Immunology,Bachelors,"$63,500","$106,800",74%
+258,258,French Literature,Bachelors,"$53,900","$106,600",50%
+259,259,Marketing Communication,Bachelors,"$52,200","$106,500",42%
+263,263,Industrial Design (ID),Bachelors,"$62,900","$106,400",40%
+265,265,Marketing & Communications,Bachelors,"$56,400","$106,300",46%
+266,266,Political Science,Bachelors,"$57,700","$106,200",47%
+267,267,Manufacturing Management,Bachelors,"$72,300","$106,100",48%
+269,269,Risk Management & Insurance,Bachelors,"$67,400","$106,000",46%
+272,272,Sales & Marketing,Bachelors,"$61,100","$105,800",49%
+274,274,Welding Engineering Technology,Bachelors,"$82,700","$105,600",42%
+275,275,Business Data Analysis,Bachelors,"$72,600","$105,500",39%
+278,278,Japanese Studies,Bachelors,"$58,000","$105,400",21%
+281,281,International Development Studies,Bachelors,"$53,700","$105,200",62%
+285,285,Accounting,Bachelors,"$62,100","$105,100",41%
+286,286,Technical Communication,Bachelors,"$55,600","$105,000",42%
+288,288,Computer Programming,Bachelors,"$67,000","$104,800",47%
+289,289,Project Management,Bachelors,"$64,400","$104,500",56%
+291,291,Urban Planning,Bachelors,"$56,100","$104,200",53%
+294,294,Safety Management,Bachelors,"$67,500","$104,000",67%
+296,296,Manufacturing Engineering Technology,Bachelors,"$74,900","$103,500",50%
+297,297,Advertising,Bachelors,"$53,500","$103,400",33%
+298,298,Insurance,Bachelors,"$63,400","$103,300",51%
+300,300,Occupational Therapy (OT),Bachelors,"$60,700","$103,200",87%
+301,301,Applied Computer Science,Bachelors,"$74,000","$103,000",42%
+302,302,Meteorology,Bachelors,"$53,100","$102,800",55%
+304,304,Radiation Therapy,Bachelors,"$76,100","$102,600",91%
+307,307,Transportation & Logistics Management,Bachelors,"$65,800","$102,500",49%
+310,310,Applied Technology,Bachelors,"$65,500","$102,300",49%
+311,311,Environmental Health,Bachelors,"$56,900","$102,200",69%
+312,312,Design,Bachelors,"$60,500","$102,000",39%
+313,313,Crop Science,Bachelors,"$54,700","$101,800",56%
+315,315,Industrial Psychology,Bachelors,"$56,400","$101,500",50%
+316,316,Neuroscience,Bachelors,"$58,900","$101,300",60%
+319,319,Microbiology,Bachelors,"$54,800","$101,200",69%
+323,323,Agronomy,Bachelors,"$55,200","$101,000",65%
+325,325,Business Communication,Bachelors,"$57,900","$100,600",47%
+328,328,Urban & Regional Planning,Bachelors,"$59,600","$100,500",60%
+329,329,Police Science,Bachelors,"$61,500","$100,100",-
+331,331,Math & Science,Bachelors,"$63,900","$100,000",64%
+332,332,Corporate Communications,Bachelors,"$54,700","$99,900",45%
+333,333,Political Science/Public Law,Bachelors,"$59,200","$99,800",69%
+334,334,Organizational Psychology,Bachelors,"$56,400","$99,700",51%
+337,337,Entomology,Bachelors,"$49,900","$99,200",-
+339,339,Product Design Engineering,Bachelors,"$73,500","$99,100",41%
+340,340,Personal Financial Planning,Bachelors,"$60,400","$99,000",60%
+341,341,Pre-law,Bachelors,"$52,900","$98,900",50%
+343,343,Textile Technology,Bachelors,"$60,400","$98,800",37%
+344,344,Technology,Bachelors,"$63,200","$98,700",-
+346,346,Environmental Science,Bachelors,"$55,800","$98,600",61%
+347,347,International Studies,Bachelors,"$56,200","$98,500",50%
+348,348,Cinema Studies,Bachelors,"$53,200","$98,300",37%
+349,349,Professional & Technical Writing,Bachelors,"$54,800","$98,200",47%
+350,350,Automotive Technology,Bachelors,"$55,400","$97,800",52%
+351,351,Information Systems Security,Bachelors,"$64,800","$97,700",47%
+354,354,Organizational Development,Bachelors,"$60,800","$97,500",55%
+356,356,Toxicology,Bachelors,"$53,900","$97,400",-
+360,360,Construction Engineering Technology,Bachelors,"$63,800","$97,200",60%
+361,361,English Literature,Bachelors,"$53,800","$97,100",46%
+363,363,Advertising & Promotion,Bachelors,"$53,400","$97,000",46%
+364,364,Hydrology,Bachelors,"$53,400","$96,900",-
+367,367,Technical Management,Bachelors,"$72,300","$96,800",66%
+368,368,Electronics & Computer Technology,Bachelors,"$60,500","$96,600",-
+369,369,Sociology & Organizational Studies,Bachelors,"$61,400","$96,500",55%
+373,373,Business Administration,Bachelors,"$60,200","$96,300",51%
+375,375,Land Surveying,Bachelors,"$58,200","$96,200",56%
+377,377,Journalism & Mass Communication,Bachelors,"$52,800","$96,100",44%
+378,378,Speech & Drama,Bachelors,"$45,100","$95,900",-
+380,380,Digital Media,Bachelors,"$52,000","$95,600",38%
+382,382,Linguistics,Bachelors,"$58,600","$95,500",42%
+384,384,General Science,Bachelors,"$56,300","$95,400",58%
+386,386,Pre-Medicine,Bachelors,"$57,200","$95,300",69%
+387,387,Nursing Science,Bachelors,"$75,600","$95,200",84%
+390,390,Integrated Marketing Communications,Bachelors,"$53,500","$95,100",38%
+392,392,American History (United States),Bachelors,"$58,900","$94,900",49%
+393,393,Personnel Management,Bachelors,"$57,900","$94,800",68%
+396,396,Natural Sciences,Bachelors,"$49,500","$94,700",54%
+400,400,Writing,Bachelors,"$49,900","$94,600",44%
+401,401,Computer Art,Bachelors,"$44,600","$94,500",33%
+404,404,Journalism,Bachelors,"$52,300","$94,100",44%
+406,406,Textile Design,Bachelors,"$56,200","$94,000",36%
+409,409,Public Relations & Communication,Bachelors,"$51,700","$93,900",48%
+412,412,Environmental & Natural Resource Economics,Bachelors,"$58,600","$93,700",66%
+413,413,General & Strategic Management,Bachelors,"$56,800","$93,600",52%
+416,416,History,Bachelors,"$54,300","$93,400",47%
+418,418,Literature,Bachelors,"$53,200","$93,300",45%
+419,419,Law,Bachelors,"$59,900","$93,200",51%
+420,420,Physiology,Bachelors,"$55,500","$93,100",66%
+421,421,Retail Management,Bachelors,"$60,400","$93,000",39%
+424,424,Music Technology,Bachelors,"$50,900","$92,900",38%
+428,428,Urban Studies,Bachelors,"$57,700","$92,800",60%
+431,431,Media Studies,Bachelors,"$57,000","$92,700",38%
+432,432,Philosophy & Religion,Bachelors,"$51,300","$92,600",54%
+434,434,Environmental Geography,Bachelors,"$55,900","$92,500",54%
+435,435,Web Design & Development,Bachelors,"$60,100","$92,300",44%
+440,440,Geographic Information Systems (GIS),Bachelors,"$56,100","$92,200",53%
+443,443,Interactive Media,Bachelors,"$61,300","$92,100",39%
+445,445,Retail Merchandising,Bachelors,"$59,000","$91,900",36%
+446,446,Diagnostic Medical Sonography,Bachelors,"$71,700","$91,800",86%
+447,447,Network Administration,Bachelors,"$54,400","$91,600",54%
+449,449,Dental Hygiene,Bachelors,"$81,200","$91,300",81%
+451,451,Workforce Education & Development,Bachelors,"$67,100","$91,200",73%
+454,454,Health Policy & Administration,Bachelors,"$57,300","$91,100",63%
+456,456,Quality Management,Bachelors,"$66,000","$90,800",62%
+457,457,Speech Communication,Bachelors,"$53,300","$90,700",56%
+459,459,Visual Effects & Motion Graphics,Bachelors,"$54,100","$90,500",38%
+461,461,Foreign Languages,Bachelors,"$55,600","$90,300",54%
+462,462,Landscape Architecture,Bachelors,"$58,700","$90,200",65%
+463,463,Global Studies,Bachelors,"$58,100","$90,100",47%
+464,464,Spanish Language Teacher Education,Bachelors,"$55,100","$89,900",-
+466,466,Technical & Scientific Communication,Bachelors,"$57,000","$89,800",35%
+467,467,Broadcast & Cinematic Arts,Bachelors,"$48,000","$89,700",41%
+468,468,Geography,Bachelors,"$56,200","$89,600",52%
+470,470,Forestry,Bachelors,"$52,800","$89,500",68%
+474,474,Nursing Education,Bachelors,"$76,300","$89,300",-
+476,476,English Language,Bachelors,"$50,900","$89,100",47%
+477,477,Geosciences,Bachelors,"$55,100","$89,000",62%
+480,480,Digital Arts,Bachelors,"$50,800","$88,900",36%
+482,482,Leadership,Bachelors,"$53,700","$88,700",55%
+483,483,Radio/Television & Film Production,Bachelors,"$51,200","$88,600",40%
+488,488,English Language & Literature,Bachelors,"$52,200","$88,500",44%
+490,490,Security Management,Bachelors,"$53,900","$88,400",-
+492,492,Public Administration,Bachelors,"$53,000","$88,300",57%
+494,494,Management (MGT),Bachelors,"$52,300","$88,200",-
+496,496,Merchandising Management,Bachelors,"$53,500","$88,100",48%
+497,497,Sports Management,Bachelors,"$51,200","$88,000",43%
+500,500,Electronic Media,Bachelors,"$50,700","$87,900",37%
+503,503,Film Production,Bachelors,"$50,500","$87,800",37%
+505,505,Marine Science,Bachelors,"$51,800","$87,600",61%
+506,506,Technical Writing,Bachelors,"$63,300","$87,500",37%
+510,510,Travel Industry Management,Bachelors,"$58,700","$87,400",-
+512,512,Nuclear Medicine Technology,Bachelors,"$68,800","$87,200",81%
+515,515,Marketing & Advertising,Bachelors,"$55,400","$87,100",45%
+516,516,Musicology,Bachelors,"$48,100","$87,000",-
+517,517,Broadcast Journalism,Bachelors,"$49,800","$86,800",52%
+518,518,Animation,Bachelors,"$50,900","$86,700",35%
+519,519,Organizational Leadership & Supervision,Bachelors,"$54,600","$86,600",53%
+522,522,Multimedia,Bachelors,"$50,400","$86,500",45%
+523,523,Acting,Bachelors,"$50,400","$86,400",48%
+527,527,Liberal Arts,Bachelors,"$51,400","$86,300",52%
+528,528,Organizational Management,Bachelors,"$55,500","$86,200",60%
+531,531,Zoology,Bachelors,"$46,800","$86,100",66%
+532,532,Creative Writing,Bachelors,"$51,200","$85,900",41%
+533,533,Geomatics,Bachelors,"$57,800","$85,800",67%
+534,534,Law Enforcement,Bachelors,"$52,800","$85,700",62%
+535,535,Fashion Marketing & Management,Bachelors,"$54,400","$85,600",27%
+538,538,Management & Leadership,Bachelors,"$59,500","$85,400",56%
+540,540,Human Resources (HR),Bachelors,"$53,800","$85,300",55%
+541,541,Animal Science & Management,Bachelors,"$51,500","$85,200",61%
+542,542,Adult Education & Training,Bachelors,"$55,200","$85,100",78%
+543,543,Health & Fitness,Bachelors,"$44,100","$84,900",71%
+545,545,Radiology,Bachelors,"$62,300","$84,800",81%
+550,550,Training and Development,Bachelors,"$59,600","$84,700",-
+554,554,Human Relations,Bachelors,"$51,100","$84,400",63%
+556,556,Natural Resources,Bachelors,"$54,200","$84,300",58%
+557,557,Hotel & Restaurant Management,Bachelors,"$54,200","$84,200",49%
+559,559,Mass Media,Bachelors,"$45,800","$83,800",45%
+561,561,Radiologic Technology,Bachelors,"$62,000","$83,700",81%
+563,563,Romance Languages,Bachelors,"$57,400","$83,600",55%
+565,565,Environmental Health Science,Bachelors,"$61,500","$83,500",-
+566,566,Psychology,Bachelors,"$51,000","$83,400",56%
+568,568,Labor Studies,Bachelors,"$53,700","$83,200",51%
+570,570,Visual Communications,Bachelors,"$51,200","$83,000",34%
+572,572,Audio Engineering,Bachelors,"$53,800","$82,800",40%
+573,573,Health,Bachelors,"$49,600","$82,700",70%
+575,575,Painting & Printmaking,Bachelors,"$39,300","$82,600",46%
+578,578,Multimedia & Web Design,Bachelors,"$55,700","$82,500",31%
+579,579,Psychology & Social Behavior,Bachelors,"$51,100","$82,400",58%
+582,582,Web Design,Bachelors,"$53,900","$82,300",29%
+586,586,Life Sciences,Bachelors,"$59,700","$82,200",60%
+588,588,Music,Bachelors,"$51,000","$82,100",55%
+590,590,SocialStudies,Bachelors,"$52,700","$82,000",56%
+593,593,Psychiatry,Bachelors,"$64,300","$81,900",50%
+595,595,Sociology,Bachelors,"$52,800","$81,800",55%
+596,596,Health Care Administration,Bachelors,"$52,100","$81,600",68%
+597,597,Respiratory Care,Bachelors,"$61,800","$81,500",85%
+599,599,Art & Design,Bachelors,"$51,100","$81,300",39%
+601,601,Child Psychology,Bachelors,"$48,400","$81,100",62%
+602,602,Theater,Bachelors,"$51,200","$81,000",49%
+607,607,Kinesiology,Bachelors,"$51,100","$80,900",66%
+608,608,Secondary Education,Bachelors,"$50,700","$80,800",58%
+611,611,Multidisciplinary Studies,Bachelors,"$49,600","$80,700",52%
+612,612,Communication Arts,Bachelors,"$47,800","$80,500",40%
+614,614,Sustainability,Bachelors,"$54,900","$80,400",58%
+617,617,Radiography,Bachelors,"$62,400","$80,300",83%
+619,619,Respiratory Therapy,Bachelors,"$61,800","$80,200",83%
+621,621,Applied Behavior Analysis,Bachelors,"$43,400","$80,000",88%
+622,622,Technology Teacher Education,Bachelors,"$54,000","$79,800",-
+623,623,Professional Studies,Bachelors,"$47,500","$79,300",67%
+624,624,Communications Technology,Bachelors,"$52,500","$79,200",32%
+625,625,Commercial Photography,Bachelors,"$48,900","$79,000",28%
+628,628,Radio & Television,Bachelors,"$49,000","$78,900",40%
+630,630,Nutrition,Bachelors,"$52,800","$78,600",65%
+631,631,Plant Sciences,Bachelors,"$55,500","$78,400",57%
+632,632,Graphic Design,Bachelors,"$51,300","$78,300",38%
+633,633,Nutrition & Dietetics,Bachelors,"$57,200","$78,200",71%
+635,635,Turfgrass Management,Bachelors,"$53,300","$78,100",38%
+636,636,Interdisciplinary Studies (IS),Bachelors,"$50,700","$78,000",57%
+638,638,Fashion Design & Marketing,Bachelors,"$55,900","$77,900",50%
+639,639,Religion,Bachelors,"$50,500","$77,800",56%
+642,642,Medical Technology,Bachelors,"$61,000","$77,700",82%
+643,643,Fine Arts,Bachelors,"$49,000","$77,600",45%
+646,646,Forensic Science,Bachelors,"$51,300","$77,400",63%
+648,648,Public Health (PH),Bachelors,"$52,300","$77,300",70%
+650,650,Speech-Language Pathology,Bachelors,"$49,600","$77,100",68%
+651,651,Women's Studies,Bachelors,"$51,200","$77,000",60%
+653,653,Modern Language Spanish,Bachelors,"$51,100","$76,900",63%
+655,655,Physical Geography,Bachelors,"$55,000","$76,800",58%
+657,657,Pastoral Studies,Bachelors,"$58,900","$76,700",-
+659,659,Dramatic Art,Bachelors,"$47,100","$76,600",-
+660,660,Music Industry,Bachelors,"$52,200","$76,400",38%
+661,661,Performing Arts,Bachelors,"$51,300","$76,300",56%
+662,662,African American & African Studies,Bachelors,"$54,300","$76,100",61%
+663,663,Ornamental Horticulture,Bachelors,"$51,600","$76,000",67%
+665,665,Hospitality & Tourism,Bachelors,"$51,400","$75,900",40%
+666,666,Education,Bachelors,"$50,600","$75,800",65%
+667,667,Foods & Nutrition,Bachelors,"$52,800","$75,300",68%
+668,668,Fashion & Retail Management,Bachelors,"$55,800","$75,000",30%
+669,669,Small Business Management,Bachelors,"$52,900","$74,900",36%
+671,671,Clinical Nutrition,Bachelors,"$58,700","$74,800",-
+672,672,Painting,Bachelors,"$47,400","$74,700",44%
+673,673,Speech Pathology & Audiology,Bachelors,"$51,400","$74,600",75%
+674,674,Physical Education Teaching,Bachelors,"$48,000","$74,400",68%
+676,676,Clinical Psychology,Bachelors,"$47,500","$74,300",65%
+677,677,Instrumental Music Teacher Education,Bachelors,"$48,000","$74,200",69%
+679,679,Technical Theatre,Bachelors,"$46,400","$74,100",41%
+680,680,Social & Criminal Justice,Bachelors,"$49,900","$73,900",55%
+682,682,Family & Consumer Science,Bachelors,"$49,400","$73,800",61%
+684,684,Network Technology,Bachelors,"$63,500","$73,700",60%
+685,685,Video Production,Bachelors,"$48,600","$73,600",36%
+687,687,International Trade,Bachelors,"$54,100","$73,400",44%
+688,688,Missions,Bachelors,"$45,400","$73,200",-
+690,690,Health Services Administration,Bachelors,"$49,000","$73,100",64%
+692,692,Justice Studies,Bachelors,"$51,500","$73,000",49%
+693,693,Physical Therapist Assistant Studies,Bachelors,"$55,100","$72,800",-
+695,695,Sports Administration,Bachelors,"$49,700","$72,600",47%
+700,700,Graphic Arts,Bachelors,"$48,000","$72,400",44%
+701,701,Secondary English Teacher Education,Bachelors,"$49,800","$72,100",62%
+703,703,Interior Design & Merchandising,Bachelors,"$50,200","$72,000",41%
+705,705,Health & Wellness,Bachelors,"$45,500","$71,900",69%
+706,706,Restaurant & Food Service Management,Bachelors,"$50,100","$71,800",40%
+707,707,Theology,Bachelors,"$49,600","$71,700",68%
+711,711,Wildlife Management,Bachelors,"$44,500","$71,600",46%
+712,712,Mortuary Science,Bachelors,"$48,800","$71,500",78%
+715,715,Media Production,Bachelors,"$49,000","$71,200",35%
+716,716,Health Services Management,Bachelors,"$47,400","$71,000",87%
+718,718,Social Science Teacher Education,Bachelors,"$51,000","$70,800",-
+720,720,Rehabilitation Counseling,Bachelors,"$44,100","$70,600",-
+722,722,Radio Broadcasting,Bachelors,"$51,000","$70,500",39%
+724,724,Community Health,Bachelors,"$52,500","$70,300",73%
+725,725,Drawing,Bachelors,"$43,400","$70,100",37%
+726,726,Dance,Bachelors,"$50,600","$69,900",59%
+727,727,Music Teacher Education,Bachelors,"$47,700","$69,800",58%
+728,728,Photojournalism,Bachelors,"$46,800","$69,700",55%
+730,730,Family & Community Services,Bachelors,"$48,400","$69,600",77%
+731,731,Drawing & Painting,Bachelors,"$48,900","$69,500",45%
+733,733,Vocal Performance,Bachelors,"$48,400","$69,400",62%
+735,735,Tourism Management,Bachelors,"$48,900","$69,200",38%
+738,738,Wildlife Biology,Bachelors,"$48,200","$68,900",58%
+739,739,Teaching English as a Second Language (ESL),Bachelors,"$48,800","$68,800",67%
+740,740,Parks & Recreation Management,Bachelors,"$49,000","$68,700",59%
+741,741,Social Services,Bachelors,"$44,800","$68,500",78%
+742,742,Elementary Special Education,Bachelors,"$51,200","$68,300",81%
+743,743,Landscape Design,Bachelors,"$57,100","$68,000",62%
+746,746,Speech & Hearing,Bachelors,"$51,400","$67,600",72%
+748,748,Sculpture,Bachelors,"$44,700","$67,200",48%
+749,749,Health Promotion,Bachelors,"$47,700","$67,000",71%
+750,750,Athletic Training,Bachelors,"$47,700","$66,900",75%
+751,751,Family Studies,Bachelors,"$45,000","$66,800",60%
+752,752,Social Studies Teacher Education,Bachelors,"$49,200","$66,700",59%
+754,754,Biblical Studies & Practical Ministries,Bachelors,"$45,400","$66,600",-
+755,755,Communication Sciences & Disorders,Bachelors,"$49,900","$66,500",75%
+756,756,Emergency Medical Services (EMS),Bachelors,"$47,300","$66,300",-
+757,757,Deaf Studies,Bachelors,"$43,700","$66,100",-
+758,758,Community Health Education,Bachelors,"$48,600","$65,800",70%
+759,759,Musical Theatre,Bachelors,"$50,000","$65,500",46%
+760,760,Pastoral Ministry,Bachelors,"$43,500","$65,200",76%
+761,761,Bible Studies & Theology,Bachelors,"$44,800","$65,100",68%
+762,762,Biblical Studies,Bachelors,"$47,000","$65,000",71%
+763,763,Christian Ministry,Bachelors,"$43,000","$64,500",75%
+764,764,Human Development & Family Studies,Bachelors,"$45,400","$64,400",63%
+765,765,Church Ministries,Bachelors,"$43,600","$64,300",79%
+766,766,Community Development,Bachelors,"$50,300","$63,600",69%
+767,767,Music Therapy,Bachelors,"$48,500","$63,500",95%
+768,768,Voice & Opera,Bachelors,"$38,700","$63,200",53%
+769,769,Legal Assistant Studies,Bachelors,"$42,000","$63,000",39%
+770,770,Health and Human Services,Bachelors,"$48,800","$62,900",64%
+771,771,Home Economics,Bachelors,"$47,700","$62,800",69%
+772,772,Special Education,Bachelors,"$46,400","$62,700",75%
+773,773,Conflict Resolution,Bachelors,"$52,000","$62,100",50%
+774,774,Developmental Psychology,Bachelors,"$42,900","$61,800",-
